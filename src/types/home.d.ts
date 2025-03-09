@@ -1,4 +1,7 @@
 // 首页类型声明文件
+
+import type { GoodsItem } from "./global"
+
 /** 首页-广告区域数据类型 ，
  * 1.在首页请求轮播图接口中运用到,不然在页面请求返回值的时候，ts可能会报错没有声明类型
  * 2.在页面请求是的变量中运用到，你的返回类型是BannerItem 了，用来存储的变量bannerList也要是这个对等的类型
@@ -44,19 +47,4 @@ export type HotItem = {
 
 
 /** 猜你喜欢-商品类型 */
-export type GuessItem = {
-    /** 商品描述 */
-    desc: string
-    /** 商品折扣 */
-    discount: number
-    /** id */
-    id: string
-    /** 商品名称 */
-    name: string
-    /** 商品已下单数量 */
-    orderNum: number
-    /** 商品图片 */
-    picture: string
-    /** 商品价格 */
-    price: number
-}
+export type GuessItem = GoodsItem

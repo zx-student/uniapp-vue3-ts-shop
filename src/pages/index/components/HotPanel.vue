@@ -14,7 +14,7 @@ defineProps<{
                 <text class="title-text">{{ item.title }}</text>
                 <text class="title-desc">{{ item.alt }}</text>
             </view>
-            <navigator hover-class="none" url="/pages/hot/hot" class="cards">
+            <navigator hover-class="none" :url="`/pages/hot/index?type=${item.id}`" class="cards">
                 <image v-for="src in item.pictures" class="image" mode="aspectFit" :key="src" :src="src"></image>
             </navigator>
         </view>
