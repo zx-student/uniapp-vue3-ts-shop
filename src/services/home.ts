@@ -9,6 +9,7 @@ import type { BannerItem, CategoryItem, HotItem, GuessItem } from '@/types/home'
  */
 export const getHomeBannerAPI = (distributionSite = 1) => {
     // 后端返回要取的数据是数组，所以是BannerItem[]，code和msg已经包含在封装过的http中，我们只需要关注result: T并且定义T
+    // 如果后端返回的是对象就直接写BannerItem
     return http<BannerItem[]>({
         method: 'GET',
         url: "/home/banner",
